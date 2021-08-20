@@ -1,0 +1,31 @@
+{
+  "name": "intellipath",
+  "version": "0.0.0",
+  "description": "IntelliSense-like autocompletion features for string literals in TypeScript",
+  "license": "GPL-3.0-only",
+  "types": "./index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aksamyt/intellipath.git"
+  },
+  "keywords": [
+    "typescript",
+    "typesafe",
+    "type",
+    "safe",
+    "dot",
+    "notation",
+    "string",
+    "literal",
+    "template",
+    "metaprogramming"
+  ],
+  "author": {
+    "name": "Alexandre Szymocha",
+    "url": "https://github.com/Aksamyt"
+  },
+  "bugs": {
+    "url": "https://github.com/Aksamyt/intellipath/issues"
+  },
+  "homepage": "https://github.com/Aksamyt/intellipath#readme"
+}
