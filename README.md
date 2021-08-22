@@ -198,3 +198,7 @@ undefined
 Don’t hesitate to open an issue or a PR if you’d want more features, or if you see that something’s missing (even if it’s a typo).
 
 There is no format for issues or commit messages. Just try to stay within the 60 character limits for commit titles, and write them in an imperative sentence.
+
+### Testing
+
+Tests are in the `t/` folder. If Perl isn’t installed on your system, you can open the .ts files there and check if there are compilation errors in your IDE.

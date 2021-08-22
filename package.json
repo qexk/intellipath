@@ -4,6 +4,15 @@
   "description": "IntelliSense-like autocompletion features for string literals in TypeScript",
   "license": "GPL-3.0-only",
   "types": "./index.d.ts",
+  "scripts": {
+    "test": "prove"
+  },
+  "devDependencies": {
+    "typescript": "4.1.x"
+  },
+  "peerDependencies": {
+    "typescript": ">=4.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Aksamyt/intellipath.git"
