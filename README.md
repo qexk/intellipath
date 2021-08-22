@@ -4,6 +4,11 @@
 
 IntelliSense-like autocompletion features for string literals in TypeScript
 
+[![Latest Stable Version](https://img.shields.io/npm/v/intellipath.svg)](https://www.npmjs.com/package/intellipath)
+[![npm peer dependency version](https://img.shields.io/npm/dependency-version/intellipath/peer/typescript)](https://www.npmjs.com/package/intellipath)
+[![David](https://img.shields.io/david/aksamyt/intellipath)](https://www.npmjs.com/package/intellipath)
+[![License](https://img.shields.io/npm/l/intellipath.svg)](https://www.gnu.org/licenses/)
+
 </div>
 
 ***
@@ -19,14 +24,12 @@ IntelliSense-like autocompletion features for string literals in TypeScript
 
 ## Installation
 
-```diff
+```sh
 # NPM
 npm i -D intellipath
 
 # Yarn
 yarn add --dev intellipath
-
-- TypeScript >= 4.1.0 is required!
 ```
 
 ## Usage
@@ -73,7 +76,14 @@ get("")
 ```
 Paste this code in a .ts file in your project and try out the autocompletion!
 
-TypeScript’s recursion limit for the path seems to be at around 10 children.
+### Caveats
+
+- Autocompletion is a bit finnicky, it works best when the string you’re trying to autocomplete is terminated.
+  ```ts
+  get("
+  //   ^ Trying to autocomplete this will do weird things
+  ```
+- TypeScript’s recursion limit for the path seems to be at around 10 children.
 
 ## How does it work?
 
@@ -92,7 +102,7 @@ For a type `T` and a path `P`, the algorithm is:
 
 The returned union contains the original `P` if it is a valid path.
 
-[`AutocompleteHelper`](https://github.com/Aksamyt/intellipath/blob/a6e44e6d8d0076573fbb2df5fc3d2bf66016014b/index.d.ts#L117) is a no-op that forces the IntelliSense engine to reevaluate both of its operands. This is the black magic that provides dot notation-like autocompletion when you press <kbd>.</kbd> on your keyboard.
+[`AutocompleteHelper`](https://github.com/Aksamyt/intellipath/blob/aad32f51ecd04a5d1fcc7d7c65d9fade09f3e972/index.d.ts#L127) is a no-op that forces the IntelliSense engine to reevaluate both of its operands. This is the black magic that provides dot notation-like autocompletion when you press <kbd>.</kbd> on your keyboard.
 
 ### Equivalent value version
 
