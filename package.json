@@ -1,6 +1,6 @@
 {
   "name": "intellipath",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "IntelliSense-like autocompletion features for string literals in TypeScript",
   "license": "GPL-3.0-only",
   "types": "index.d.ts",
