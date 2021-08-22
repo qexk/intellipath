@@ -3,10 +3,13 @@
   "version": "0.0.0",
   "description": "IntelliSense-like autocompletion features for string literals in TypeScript",
   "license": "GPL-3.0-only",
-  "types": "./index.d.ts",
+  "types": "index.d.ts",
   "scripts": {
     "test": "prove"
   },
+  "files": [
+    "index.d.ts"
+  ],
   "devDependencies": {
     "typescript": "4.1.x"
   },
