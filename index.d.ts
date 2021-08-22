@@ -75,18 +75,28 @@ type ExistingPath<T, _Path extends string[], _Valid extends string = ""> =
         : [T, _Valid]
 ;
 
+declare const catch_any: unique symbol;
 /**
  * SafeKeyof analyzes the type of {@link T} and expands to:
  * - `keyof T & string` if it is an object
+ * - `"<any>"` if it is an any
  * - `"<index>"` if it is an array
  * - `""` else
  */
 type SafeKeyof<T> =
-    T extends any[]
-        ? "<index>"
-        : T extends Record<any, any>
-            ? keyof T & string
-            : ""
+    T extends null
+        ? ""
+        : typeof catch_any extends T     // unique symbol extends symbol | any
+            ? T extends typeof catch_any // only any extends unique symbol
+                ? "<any>"
+                : ""
+            : T extends Function
+                ? ""
+                : T extends any[]
+                    ? "<index>"
+                    : T extends Record<any, any>
+                        ? keyof T & string
+                        : ""
 ;
 
 /**
