@@ -4,11 +4,17 @@
 
 IntelliSense-like autocompletion features for string literals in TypeScript
 
+<img src="https://user-images.githubusercontent.com/3847189/130576520-dc04008c-49e7-411d-8593-af0ceb16661f.gif" width="400" />
+
+<p>
+
 [![Latest Stable Version](https://img.shields.io/npm/v/intellipath.svg)](https://www.npmjs.com/package/intellipath)
-[![npm peer dependency version](https://img.shields.io/npm/dependency-version/intellipath/peer/typescript)](https://www.npmjs.com/package/intellipath)
+[![TypeScript >= 4.1.0](https://img.shields.io/npm/dependency-version/intellipath/peer/typescript)](https://www.npmjs.com/package/intellipath)
+[![Install size](https://badgen.net/packagephobia/install/intellipath)](https://www.npmjs.com/package/intellipath)
 [![David](https://img.shields.io/david/aksamyt/intellipath)](https://www.npmjs.com/package/intellipath)
 [![License](https://img.shields.io/npm/l/intellipath.svg)](https://www.gnu.org/licenses/)
 
+</p>
 </div>
 
 ***
@@ -20,7 +26,8 @@ IntelliSense-like autocompletion features for string literals in TypeScript
 - (Ab)use your IDE’s autocompletion to provide the best developer experience
 - Gradual typing means less resource usage
 - Does not compute every single path on every keystroke
-- Allows numeric indices to access array elements
+- Use numeric indices to access array elements
+- Compatible with weird types like `any`
 
 ## Installation
 
